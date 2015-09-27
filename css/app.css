@@ -1,6 +1,6 @@
 
 @import "normalize.css";
-
+/*@import "./index.css";*/
 
 body, html {
   width: 100%;
@@ -65,58 +65,117 @@ a:hover {
 }
 
 .section1 {
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-position: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(31,30,52,1));
+  z-index: 2;
+}
+
+
+
 .logo {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 
 .nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 3;
 }
 
 .nav a {
   padding-left: 25px;
+  color: #fff;
 }
 
-.iphone-demo {
-  background-color: rgba(255,0,0,0.3);
-}
 
-.feature-description {
-  background-color: rgba(0,255,0,0.3);
-}
 
 .section2, .section3, .section4 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .iphone-demo {
   flex-grow: 1;
   align-self: stretch;
   flex-basis: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature-description {
   flex-grow: 1;
   align-self: stretch;
   flex-basis: 0;
+  align-items: center;
+  justify-content: center;
 }
 .feature-description h2 {
   text-align: center;
 }
 .feature-description > p {
-  padding: 0 100px;
+  padding: 0 100px ;
+}
+.iphone-image {
+  position: relative;
+  width: 300px;
+  height: 630px;
+
+}
+.screen-image, .swype-image {
+  position: absolute;
+  left: 25px;
+  top: 90px;
 }
 
+.android-robot {
+  position: absolute;
+  right: -100px;
+  bottom: -100px;
+  overflow: hidden;
+  transform: rotate(-45deg);
+}
 
+#slider-control {
+  position: fixed;
+  right: 3px;
+  top: 50%;
+  transform: translate(0, -100%);
+  padding: 3px;
+}
+
+#slider-control a {
+  padding: 3px;
+}
+
+#slider-control .dot {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+}
+
+#slider-control .active .dot {
+  background-color: #fff;
+}
 
