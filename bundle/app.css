@@ -551,6 +551,7 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   z-index: 3;
+  position: relative;
 }
 
 .nav {
@@ -594,6 +595,9 @@ a:hover {
           align-items: center;
   position: relative;
   overflow: hidden;
+}
+.react-logo {
+  position: relative;
 }
 
 .iphone-demo {
@@ -673,6 +677,7 @@ a:hover {
       -ms-transform: translate(0, -100%);
           transform: translate(0, -100%);
   padding: 3px;
+  z-index: 3;
 }
 
 #slider-control a {
